@@ -16,7 +16,6 @@
 </template>
 
 
-
 <script>
 
   import mHeader from './base/m-header';

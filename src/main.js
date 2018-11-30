@@ -11,6 +11,14 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI);
 
+import axios from 'axios';
+
+Vue.prototype.$axios = axios;
+//axios.defaults.baseURL = '/api';
+
+console.log(Vue.prototype);
+
+
 window.eventBus = new Vue();         //这是一个好东西 可以同级 父传子 子传父都行
 
 new Vue({

@@ -9,9 +9,24 @@
 </template>
 
 <script>
-    export default {
-        name: "example"
+
+  import axios from 'axios';
+
+  export default {
+    name: "example",
+    mounted() {
+      axios({
+        method: 'post',
+        url: '/s/essay/appArticle/catlogs',
+        data: {channel: 'HUAXIA'}
+      }).then(function (res) {
+        console.log(res);
+      }).then(function (err) {
+        console.log(err);
+      });
     }
+  }
+
 </script>
 
 <style scoped>
